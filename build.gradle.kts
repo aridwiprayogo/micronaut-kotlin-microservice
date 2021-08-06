@@ -34,6 +34,7 @@ dependencies {
     implementation("io.micronaut.kotlin:micronaut-kotlin-extension-functions")
     implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
     implementation("io.micronaut.r2dbc:micronaut-r2dbc-core")
+    implementation("io.micronaut.data:micronaut-data-r2dbc")
     implementation("io.micronaut.security:micronaut-security")
     implementation("io.micronaut.security:micronaut-security-jwt")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")

@@ -19,13 +19,12 @@ micronaut:
     endpoints:
       login:
         path: /auth/login
-
+datasources:
   default:
     url: jdbc:postgresql://localhost:5432/microservice
     driverClassName: org.postgresql.Driver
     username: postgres
     password: 'root'
-
 vertx:
   pg:
     client:
@@ -35,10 +34,6 @@ vertx:
       user: postgres
       password: root
       maxSize: 5
-r2dbc:
-  datasources:
-    default:
-
 flyway:
   datasources:
     default:
