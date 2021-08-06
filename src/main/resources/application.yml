@@ -7,10 +7,15 @@ micronaut:
     authentication: bearer
     token:
       jwt:
+        generator:
+          access-token:
+            expiration: 604800
         signatures:
           secret:
             generator:
-              secret: '"${JWT_GENERATOR_SIGNATURE_SECRET:pleaseChangeThisSecretForANewOne}"'
+              base64: true
+              secret: '"${JWT_GENERATOR_SIGNATURE_SECRET:248eddd4-2ef6-4191-8079-1e1ca988ebf3}"'
+              jws-algorithm: HS256
     endpoints:
       login:
         path: /auth/login
@@ -30,6 +35,6 @@ vertx:
       password: root
       maxSize: 5
 flyway:
-  datasources: 
-    default: 
+  datasources:
+    default:
       enabled: true
